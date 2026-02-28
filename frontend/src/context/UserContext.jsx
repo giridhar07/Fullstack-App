@@ -3,7 +3,7 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
 
-// Context create karo
+// Context creation
 export const UserContext = createContext();
 
 // Provider
@@ -11,10 +11,10 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);  
   const [loading, setLoading] = useState(true);
 
-  // API se user profile 
+  // fetch user profile from API
   const fetchUserProfile = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/users/profile", {
+      const res = await axios.get("https://fullstack-app-cra5.onrender.com/api/users/profile", {
         withCredentials: true,
       });
       setUser(res.data);

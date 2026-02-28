@@ -15,7 +15,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/users/logout",
+        "https://fullstack-app-cra5.onrender.com/api/users/logout",
         {},
         { withCredentials: true }
       );
@@ -41,7 +41,7 @@ const Navbar = () => {
           {user && (
             <>
               <Link
-                to="/"
+                to="/home"
                 className="hover:text-yellow-300 transition duration-300"
               >
                 Home
@@ -57,7 +57,7 @@ const Navbar = () => {
 
           {user ? (
             <div className="flex items-center space-x-4">
-              {/* User name + profile link */}
+              {/* User name  */}
               <Link
                 to="/profile"
                 className="hover:text-yellow-300 transition duration-300 flex items-center"

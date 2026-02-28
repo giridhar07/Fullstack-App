@@ -31,7 +31,7 @@ const CreateEvent = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/events", {
+      await axios.post("https://fullstack-app-cra5.onrender.com/api/events", {
         name,
         location,
         description,
