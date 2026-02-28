@@ -47,7 +47,7 @@ const Home = () => {
   const fetchEvents = async () => {
     setLoadingEvents(true)
     try {
-      const res = await axios.get("http://localhost:5000/api/events")
+      const res = await axios.get("https://fullstack-app-cra5.onrender.com/api/events")
       setEvents(res.data)
     } catch (err) {
       console.error(err)
@@ -67,7 +67,7 @@ const Home = () => {
     if (!selectedEvent) return
     setDeleting(true)
     try {
-      await axios.delete(`http://localhost:5000/api/events/${selectedEvent._id}`)
+      await axios.delete(`https://fullstack-app-cra5.onrender.com/api/events/${selectedEvent._id}`)
       toast.success("Event deleted successfully 🎉")
       await fetchEvents()
       setShowDelete(false)
@@ -102,7 +102,7 @@ const Home = () => {
     if (!selectedEvent) return
     setSavingEdit(true)
     try {
-      await axios.put(`http://localhost:5000/api/events/edit?eventId=${selectedEvent?._id}`, {
+      await axios.put(`https://fullstack-app-cra5.onrender.com/api/events/edit?eventId=${selectedEvent?._id}`, {
         name: editForm.name.trim(),
         location: editForm.location,
         description: editForm.description,

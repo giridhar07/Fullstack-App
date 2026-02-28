@@ -21,7 +21,7 @@ export default function AuthForm() {
     setLoading(true)
     try {
       if (mode === "login") {
-        const response = await axios.post("http://localhost:5000/api/users/login", {
+        const response = await axios.post("https://fullstack-app-cra5.onrender.com/api/users/login", {
           email: form.email,
           password: form.password,
         },{
@@ -34,7 +34,7 @@ export default function AuthForm() {
            navigate("/")
         }
       } else {
-        const response = await axios.post("http://localhost:5000/api/users/signup", {
+        const response = await axios.post("https://fullstack-app-cra5.onrender.com/api/users/signup", {
           username: form.username,
           email: form.email,
           password: form.password,
@@ -54,11 +54,7 @@ export default function AuthForm() {
   const isLogin = mode === "login"
 
   return (
-    <div className="h-full p-8 bg-white/10  border border-white/20 shadow-lg "
-    //  style={{
-    //     boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
-    //  }}
-    >
+    <div className="h-full p-8 bg-white/10  border border-white/20 shadow-lg ">
       {/* Toggle */}
       <div className="mb-6 grid grid-cols-2 gap-2 rounded-lg bg-white/10 p-1 backdrop-blur-md border border-white/20">
         <button

@@ -12,7 +12,7 @@ const EventDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/events/${id}`)
+      .get(`https://fullstack-app-cra5.onrender.com/api/events/${id}`)
       .then((response) => setEvent(response.data))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));
