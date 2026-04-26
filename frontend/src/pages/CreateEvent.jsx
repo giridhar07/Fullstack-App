@@ -148,3 +148,4 @@ const CreateEvent = () => {
 
 export default CreateEvent;
 
+Collaborated within multidisciplinary Agile teams using Jira and Confluence, contributing to the delivery of 2-3 sprint features per iteration, reducing backlog carryover by 40% and improving sprint predictability through effective communication.
